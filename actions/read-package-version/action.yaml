@@ -1,0 +1,11 @@
+name: 'Package Version Info'
+description: 'Reads package version and name from workspace and emits to env vars: VER and PACKAGE.'
+inputs:
+  workspace:
+    description: 'Workspace path to read package.json version for commit message.'
+    required: false
+    default: '.'
+    type: string
+runs:
+  using: 'node20'
+  main: '../../dist/read-package-version.js'

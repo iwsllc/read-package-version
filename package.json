@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@stylistic/eslint-plugin": "^2.4.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-promise": "^7.0.0",
+    "glob": "^11.0.0",
+    "globals": "^15.8.0",
+    "rollup": "^4.19.1"
+  }
+}
