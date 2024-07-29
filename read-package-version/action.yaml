@@ -8,4 +8,4 @@ inputs:
     type: string
 runs:
   using: 'node20'
-  main: '../../dist/read-package-version.js'
+  main: '../dist/read-package-version.js'
