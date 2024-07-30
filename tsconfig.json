@@ -1,8 +1,28 @@
 {
-	"extends": "./tsconfig-base.json",
 	"compilerOptions": {
+		"allowJs": false,
+		"composite": false,
+		"declaration": false,
+		"declarationMap": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": false,
+		"lib": ["ES2023"],
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"noImplicitAny": true,
 		"outDir": "./dist",
-		"rootDir": "."
+		"resolveJsonModule": true,
+		"rootDir": ".",
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true,
+		"sourceMap": false,
+		"strict": true,
+    "target": "ES2022",
+		"noEmit": true,
+		"types": [
+			"vitest/globals"
+		]
 	},
-	"include": ["./**/*.cts","./**/*.ts","./**/*.mts"]
+	"include": ["src/**/*"],
 }

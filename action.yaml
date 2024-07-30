@@ -6,6 +6,11 @@ inputs:
     required: false
     default: '.'
     type: string
+  path:
+    description: 'Path where the repository files have been checked out within the $GITHIB_WORKSPACE'
+    required: false
+    default: '.'
+    type: string
 runs:
   using: 'node20'
-  main: '../dist/read-package-version/index.js'
+  main: '../dist/index.js'

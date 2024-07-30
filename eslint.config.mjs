@@ -12,13 +12,19 @@ export default [
 		},
 		// all projects:
 		eslint.configs.recommended,
-
-		// applies to all files: Core TS Rules
 		...tseslint.configs.recommended,
+
+		stylistic.configs.customize({
+			braceStyle: '1tbs',
+			commaDangle: 'never',
+			indent: 'tab',
+			jsx: true,
+			quotes: 'single',
+			semi: false
+		}),
 		{
 			plugins: {
-				'promise': promisePlugin,
-				'@stylistic': stylistic
+				promise: promisePlugin
 			},
 			languageOptions: {
 				ecmaVersion: 2023,
@@ -29,32 +35,22 @@ export default [
 			},
 			rules: {
 				...promisePlugin.configs.recommended.rules,
-				...stylistic.configs['recommended-flat'].rules,
 
 				// custom rules here
 				'promise/always-return': ['error', { ignoreLastCallback: true }],
-				'no-unused-vars': ['error', {
-					argsIgnorePattern: '^_',
-					varsIgnorePattern: '^_',
-					destructuredArrayIgnorePattern: '^_',
-					caughtErrorsIgnorePattern: '^_'
-				}],
+
 				'@typescript-eslint/no-explicit-any': 'off',
 				'@typescript-eslint/no-unused-vars': ['error', {
 					argsIgnorePattern: '^_',
 					varsIgnorePattern: '^_',
 					destructuredArrayIgnorePattern: '^_',
 					caughtErrorsIgnorePattern: '^_'
-				}],
-				'@stylistic/no-tabs': ['error', { allowIndentationTabs: true }],
-				'@stylistic/indent': ['error', 'tab'],
-				'@stylistic/indent-binary-ops': ['error', 'tab'],
-				'@stylistic/comma-dangle': ['error', 'never']
+				}]
 			}
 		},
 		{
 		// node rules
-			files: ['actions/**/*'],
+			files: ['**/*.ts'],
 			// files: [],
 
 			plugins: {
@@ -65,4 +61,5 @@ export default [
 				...nodePlugin.configs['flat/recommended'].rules
 			}
 		}
-	)]
+	)
+]
