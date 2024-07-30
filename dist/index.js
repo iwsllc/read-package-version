@@ -24887,6 +24887,7 @@ async function run() {
             throw new Error(`package.json not found at ${projectPath}`);
         const contents = await (0,promises_namespaceObject.readFile)(projectPath, 'utf8');
         const pkg = JSON.parse(contents);
+        (0,core.info)(`package.json: ${pkg.name}@${pkg.version}`);
         (0,core.exportVariable)('VER', pkg.version);
         (0,core.exportVariable)('PACKAGE', pkg.name);
     }

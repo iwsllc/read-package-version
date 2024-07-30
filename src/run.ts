@@ -14,6 +14,7 @@ export async function run() {
 		if (!(await exists(projectPath))) throw new Error(`package.json not found at ${projectPath}`)
 		const contents = await readFile(projectPath, 'utf8')
 		const pkg = JSON.parse(contents)
+		info(`package.json: ${pkg.name}@${pkg.version}`)
 		exportVariable('VER', pkg.version)
 		exportVariable('PACKAGE', pkg.name)
 	} catch (error: any) {
