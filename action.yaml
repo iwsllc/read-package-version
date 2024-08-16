@@ -7,7 +7,7 @@ inputs:
     default: '.'
     type: string
   path:
-    description: 'Path where the repository files have been checked out within the $GITHIB_WORKSPACE'
+    description: 'Path where the repository files have been checked out within the $GITHUB_WORKSPACE'
     required: false
     default: '.'
     type: string
