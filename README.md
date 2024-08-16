@@ -19,20 +19,20 @@ I personally use this to customize the git tags when publishing npm packages.  O
 ```yaml
 #... typical workflow, action/checkout, etc.
 steps:
-	- name: 'Bump version'
-		run: |
-			git config user.name github-actions
-			git config user.email github-actions@github.com
-			npm version patch --no-git-tag-version
-	- name: 'Read new package version'
-		uses: iwsllc/read-package-version@v1
-		with:
-			# reads the current name/version from ./packages/test-package/package.json
-			workspace: ./packages/test-package
-	- name: 'Tag version'
-		run: |
-			git commit -am "feat: $PACKAGE version bump to $VER"
-			git tag -am "Released $PACKAGE $VER" "$PACKAGE@$VER"
-			git push
-			git push --tags
+- name: 'Bump version'
+  run: |
+    git config user.name github-actions
+    git config user.email github-actions@github.com
+    npm version patch --no-git-tag-version
+- name: 'Read new package version'
+  uses: iwsllc/read-package-version@v1
+  with:
+    # reads the current name/version from ./packages/test-package/package.json
+    workspace: ./packages/test-package
+- name: 'Tag version'
+  run: |
+    git commit -am "feat: $PACKAGE version bump to $VER"
+    git tag -am "Released $PACKAGE $VER" "$PACKAGE@$VER"
+    git push
+    git push --tags
 ```
