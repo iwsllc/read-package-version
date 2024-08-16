@@ -17,7 +17,8 @@ I personally use this to customize the git tags when publishing npm packages.  O
 ## Example usage:
 
 ```yaml
- #... typical workflow, action/checkout, etc.
+#... typical workflow, action/checkout, etc.
+steps:
 	- name: 'Bump version'
 		run: |
 			git config user.name github-actions
