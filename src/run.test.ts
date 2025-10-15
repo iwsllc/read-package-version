@@ -1,4 +1,5 @@
 import * as core from '@actions/core'
+
 import * as getInputs from './getInputs.js'
 import { run } from './run.js'
 

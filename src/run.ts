@@ -1,6 +1,8 @@
-import { exportVariable, setFailed, info } from '@actions/core'
-import { readFile } from 'fs/promises'
-import { resolve } from 'path/posix'
+import { readFile } from 'node:fs/promises'
+import { resolve } from 'node:path/posix'
+
+import { exportVariable, info, setFailed } from '@actions/core'
+
 import { exists } from './exists.js'
 import { getInputs } from './getInputs.js'
 
