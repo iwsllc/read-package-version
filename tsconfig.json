@@ -1,26 +1,19 @@
 {
+	"extends": "@iwsio/tsconfig",
 	"compilerOptions": {
-		"allowJs": false,
 		"composite": false,
 		"declaration": false,
 		"declarationMap": false,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
 		"incremental": false,
-		"lib": ["ES2023"],
-		"module": "NodeNext",
+		"inlineSources": false,
+		"module": "nodenext",
 		"moduleResolution": "nodenext",
-		"noImplicitAny": true,
-		"outDir": "./dist",
-		"resolveJsonModule": true,
-		"rootDir": ".",
-		"skipDefaultLibCheck": true,
-		"skipLibCheck": true,
-		"sourceMap": false,
-		"strict": true,
-    "target": "ES2022",
+		"lib": ["ES2022"],
 		"noEmit": true,
+		"outDir": "./dist",
+		"sourceMap": false,
 		"types": [
+			"node",
 			"vitest/globals"
 		]
 	},

@@ -25,7 +25,7 @@ steps:
     git config user.email github-actions@github.com
     npm version patch --no-git-tag-version
 - name: 'Read new package version'
-  uses: iwsllc/read-package-version@v1
+  uses: iwsllc/read-package-version@v2
   with:
     # reads the current name/version from ./packages/test-package/package.json
     workspace: ./packages/test-package

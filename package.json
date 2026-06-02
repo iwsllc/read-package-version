@@ -4,27 +4,24 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc --build tsconfig.build.json && ncc build src/index.ts -o dist",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "lint": "eslint ."
   },
   "module": "dist/index.mjs",
   "type": "module",
   "license": "MIT",
+  "packageManager": "pnpm@11.4.0+sha512.f0febc7e37552ab485494a914241b338e0b3580b93d54ce31f00933015880863129038a1b4ae4e414a0ee63ac35bf21197e990172c4a68256450b5636310968f",
   "dependencies": {
-    "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
-    "@stylistic/eslint-plugin": "^2.4.0",
-    "@types/node": "^20.14.13",
-    "@vercel/ncc": "^0.38.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-n": "^17.10.1",
-    "eslint-plugin-promise": "^7.0.0",
-    "globals": "^15.8.0",
-    "rimraf": "^6.0.1",
-    "typescript-eslint": "^7.18.0",
-    "vitest": "^2.0.4"
+    "@iwsio/eslint-config": "^3.0.0",
+    "@iwsio/tsconfig": "^1.0.3",
+    "@types/node": "^25.9.1",
+    "@vercel/ncc": "^0.38.4",
+    "rimraf": "^6.1.3",
+    "vitest": "^4.1.8"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }
